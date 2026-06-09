@@ -1,0 +1,75 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - generic [ref=e5]: HairBook
+      - navigation [ref=e6]:
+        - link "Kalendarz" [ref=e7] [cursor=pointer]:
+          - /url: /calendar
+          - img [ref=e8]
+          - text: Kalendarz
+        - link "Dzisiaj" [ref=e10] [cursor=pointer]:
+          - /url: /today
+          - img [ref=e11]
+          - text: Dzisiaj
+        - link "Wolne terminy" [ref=e14] [cursor=pointer]:
+          - /url: /availability
+          - img [ref=e15]
+          - text: Wolne terminy
+        - link "Wizyty" [ref=e18] [cursor=pointer]:
+          - /url: /appointments
+          - img [ref=e19]
+          - text: Wizyty
+        - link "Klienci" [ref=e22] [cursor=pointer]:
+          - /url: /clients
+          - img [ref=e23]
+          - text: Klienci
+        - link "Usługi" [ref=e28] [cursor=pointer]:
+          - /url: /services
+          - img [ref=e29]
+          - text: Usługi
+        - link "Pracownicy" [ref=e35] [cursor=pointer]:
+          - /url: /employees
+          - img [ref=e36]
+          - text: Pracownicy
+      - paragraph [ref=e49]: N nowa wizyta T dzisiaj
+    - generic [ref=e50]:
+      - banner [ref=e51]:
+        - generic [ref=e52]:
+          - generic [ref=e53]: Anna Kowalska
+          - button "Wyloguj" [ref=e54]
+      - main [ref=e55]:
+        - generic [ref=e56]:
+          - generic [ref=e58]:
+            - heading "Klienci" [level=1] [ref=e59]
+            - paragraph [ref=e60]: 4 wyników
+          - generic [ref=e61]:
+            - textbox "Szukaj po imieniu lub numerze telefonu..." [ref=e62]
+            - button "Szukaj" [ref=e63]
+          - generic [ref=e64]:
+            - link "J Joanna Malinowska 600111222 · 6 wizyt" [ref=e65] [cursor=pointer]:
+              - /url: /clients/cli_1
+              - generic [ref=e66]: J
+              - generic [ref=e67]:
+                - paragraph [ref=e68]: Joanna Malinowska
+                - paragraph [ref=e69]: 600111222 · 6 wizyt
+            - link "M Marta Krawczyk 601555666 · 4 wizyt" [ref=e70] [cursor=pointer]:
+              - /url: /clients/cli_3
+              - generic [ref=e71]: M
+              - generic [ref=e72]:
+                - paragraph [ref=e73]: Marta Krawczyk
+                - paragraph [ref=e74]: 601555666 · 4 wizyt
+            - link "P Piotr Zając 600333444 · 4 wizyt" [ref=e75] [cursor=pointer]:
+              - /url: /clients/cli_2
+              - generic [ref=e76]: P
+              - generic [ref=e77]:
+                - paragraph [ref=e78]: Piotr Zając
+                - paragraph [ref=e79]: 600333444 · 4 wizyt
+            - link "T Tomasz Lewandowski 601777888 · 6 wizyt" [ref=e80] [cursor=pointer]:
+              - /url: /clients/cli_4
+              - generic [ref=e81]: T
+              - generic [ref=e82]:
+                - paragraph [ref=e83]: Tomasz Lewandowski
+                - paragraph [ref=e84]: 601777888 · 6 wizyt
+  - button "Open Next.js Dev Tools" [ref=e90] [cursor=pointer]:
+    - img [ref=e91]
+  - alert [ref=e94]

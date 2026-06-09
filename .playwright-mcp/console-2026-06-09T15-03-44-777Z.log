@@ -1,0 +1,21 @@
+[    1090ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[    1712ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[    1738ms] [ERROR] %c%s%c Only plain objects can be passed to Client Components from Server Components. %s objects are not supported.%s background: #e6e6e6;background: light-dark(rgba(0,0,0,0.1), rgba(255,255,255,0.25));color: #000000;color: light-dark(#000000, #ffffff);border-radius: 2px  Server   Decimal 
+  {id: ..., name: ..., durationMin: 45, color: ..., pricePln: Decimal, active: ..., createdAt: ...}
+                                                              ^^^^^^^ @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[    1739ms] [ERROR] %c%s%c Only plain objects can be passed to Client Components from Server Components. %s objects are not supported.%s background: #e6e6e6;background: light-dark(rgba(0,0,0,0.1), rgba(255,255,255,0.25));color: #000000;color: light-dark(#000000, #ffffff);border-radius: 2px  Server   Decimal 
+  {id: ..., name: ..., durationMin: 120, color: ..., pricePln: Decimal, active: ..., createdAt: ...}
+                                                               ^^^^^^^ @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[    1739ms] [ERROR] %c%s%c Only plain objects can be passed to Client Components from Server Components. %s objects are not supported.%s background: #e6e6e6;background: light-dark(rgba(0,0,0,0.1), rgba(255,255,255,0.25));color: #000000;color: light-dark(#000000, #ffffff);border-radius: 2px  Server   Decimal 
+  {id: ..., name: ..., durationMin: 30, color: ..., pricePln: Decimal, active: ..., createdAt: ...}
+                                                              ^^^^^^^ @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[    1740ms] [ERROR] %c%s%c Only plain objects can be passed to Client Components from Server Components. %s objects are not supported.%s background: #e6e6e6;background: light-dark(rgba(0,0,0,0.1), rgba(255,255,255,0.25));color: #000000;color: light-dark(#000000, #ffffff);border-radius: 2px  Server   Decimal 
+  {id: ..., name: ..., durationMin: 60, color: ..., pricePln: Decimal, active: ..., createdAt: ...}
+                                                              ^^^^^^^ @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[    1740ms] [ERROR] %c%s%c Only plain objects can be passed to Client Components from Server Components. %s objects are not supported.%s background: #e6e6e6;background: light-dark(rgba(0,0,0,0.1), rgba(255,255,255,0.25));color: #000000;color: light-dark(#000000, #ffffff);border-radius: 2px  Server   Decimal 
+  {id: ..., name: ..., durationMin: 30, color: ..., pricePln: Decimal, active: ..., createdAt: ...}
+                                                              ^^^^^^^ @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[    2218ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[    2445ms] [LOG] [Fast Refresh] done in 336ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[    2626ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[    2694ms] [LOG] [Fast Refresh] done in 173ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431

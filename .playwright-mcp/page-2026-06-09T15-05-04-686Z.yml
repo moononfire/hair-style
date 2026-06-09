@@ -1,0 +1,85 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - generic [ref=e5]: HairBook
+      - navigation [ref=e6]:
+        - link "Kalendarz" [ref=e7] [cursor=pointer]:
+          - /url: /calendar
+          - img [ref=e8]
+          - text: Kalendarz
+        - link "Dzisiaj" [ref=e10] [cursor=pointer]:
+          - /url: /today
+          - img [ref=e11]
+          - text: Dzisiaj
+        - link "Wolne terminy" [ref=e14] [cursor=pointer]:
+          - /url: /availability
+          - img [ref=e15]
+          - text: Wolne terminy
+        - link "Wizyty" [ref=e18] [cursor=pointer]:
+          - /url: /appointments
+          - img [ref=e19]
+          - text: Wizyty
+        - link "Klienci" [ref=e22] [cursor=pointer]:
+          - /url: /clients
+          - img [ref=e23]
+          - text: Klienci
+        - link "Usługi" [ref=e28] [cursor=pointer]:
+          - /url: /services
+          - img [ref=e29]
+          - text: Usługi
+        - link "Pracownicy" [ref=e35] [cursor=pointer]:
+          - /url: /employees
+          - img [ref=e36]
+          - text: Pracownicy
+      - paragraph [ref=e49]: N nowa wizyta T dzisiaj
+    - generic [ref=e50]:
+      - banner [ref=e51]:
+        - generic [ref=e52]:
+          - generic [ref=e53]: Anna Kowalska
+          - button "Wyloguj" [ref=e54]
+      - main [ref=e55]:
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - heading "Usługi" [level=1] [ref=e58]
+            - paragraph [ref=e59]: 5 aktywnych
+          - generic [ref=e60]:
+            - generic [ref=e61]:
+              - generic [ref=e62]:
+                - generic [ref=e64]:
+                  - paragraph [ref=e65]: Blow-dry / stylizacja
+                  - paragraph [ref=e66]: 45 min · 80 PLN
+                - generic [ref=e67]:
+                  - button "Edytuj" [ref=e68]
+                  - button "Dezaktywuj" [ref=e69]
+              - generic [ref=e70]:
+                - generic [ref=e72]:
+                  - paragraph [ref=e73]: Koloryzacja
+                  - paragraph [ref=e74]: 120 min · 250 PLN
+                - generic [ref=e75]:
+                  - button "Edytuj" [ref=e76]
+                  - button "Dezaktywuj" [ref=e77]
+              - generic [ref=e78]:
+                - generic [ref=e80]:
+                  - paragraph [ref=e81]: Pielęgnacja (maska + wcierka)
+                  - paragraph [ref=e82]: 30 min · 70 PLN
+                - generic [ref=e83]:
+                  - button "Edytuj" [ref=e84]
+                  - button "Dezaktywuj" [ref=e85]
+              - generic [ref=e86]:
+                - generic [ref=e88]:
+                  - paragraph [ref=e89]: Strzyżenie damskie
+                  - paragraph [ref=e90]: 60 min · 120 PLN
+                - generic [ref=e91]:
+                  - button "Edytuj" [ref=e92]
+                  - button "Dezaktywuj" [ref=e93]
+              - generic [ref=e94]:
+                - generic [ref=e96]:
+                  - paragraph [ref=e97]: Strzyżenie męskie
+                  - paragraph [ref=e98]: 30 min · 60 PLN
+                - generic [ref=e99]:
+                  - button "Edytuj" [ref=e100]
+                  - button "Dezaktywuj" [ref=e101]
+            - button "+ Nowa usługa" [ref=e102]
+  - button "Open Next.js Dev Tools" [ref=e108] [cursor=pointer]:
+    - img [ref=e109]
+  - alert [ref=e112]

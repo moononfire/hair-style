@@ -1,0 +1,130 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - generic [ref=e5]: HairBook
+      - navigation [ref=e6]:
+        - link "Kalendarz" [ref=e7] [cursor=pointer]:
+          - /url: /calendar
+          - img [ref=e8]
+          - text: Kalendarz
+        - link "Dzisiaj" [ref=e10] [cursor=pointer]:
+          - /url: /today
+          - img [ref=e11]
+          - text: Dzisiaj
+        - link "Wolne terminy" [ref=e14] [cursor=pointer]:
+          - /url: /availability
+          - img [ref=e15]
+          - text: Wolne terminy
+        - link "Wizyty" [ref=e18] [cursor=pointer]:
+          - /url: /appointments
+          - img [ref=e19]
+          - text: Wizyty
+        - link "Klienci" [ref=e22] [cursor=pointer]:
+          - /url: /clients
+          - img [ref=e23]
+          - text: Klienci
+        - link "Usługi" [ref=e28] [cursor=pointer]:
+          - /url: /services
+          - img [ref=e29]
+          - text: Usługi
+        - link "Pracownicy" [ref=e35] [cursor=pointer]:
+          - /url: /employees
+          - img [ref=e36]
+          - text: Pracownicy
+      - paragraph [ref=e49]: N nowa wizyta T dzisiaj
+    - generic [ref=e50]:
+      - banner [ref=e51]:
+        - generic [ref=e52]:
+          - generic [ref=e53]: Anna Kowalska
+          - button "Wyloguj" [ref=e54]
+      - main [ref=e55]:
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - generic [ref=e58]: A
+            - generic [ref=e59]:
+              - heading "Anna" [level=1] [ref=e60]
+              - paragraph [ref=e61]: Aktywny
+          - generic [ref=e62]:
+            - heading "Dane podstawowe" [level=2] [ref=e63]
+            - generic [ref=e64]:
+              - generic [ref=e65]:
+                - generic [ref=e66]:
+                  - text: Imię i nazwisko
+                  - textbox [ref=e67]: Anna
+                - generic [ref=e68]:
+                  - text: Telefon
+                  - textbox "np. 500100200" [ref=e69]: "500100200"
+              - generic [ref=e70]:
+                - text: Kolor w kalendarzu
+                - generic [ref=e71]:
+                  - textbox [ref=e72] [cursor=pointer]: "#f43f5e"
+                  - generic [ref=e73]: "#f43f5e"
+              - generic [ref=e74]:
+                - button "Zapisz zmiany" [ref=e75]
+                - button "Dezaktywuj" [ref=e76]
+          - generic [ref=e77]:
+            - heading "Godziny pracy" [level=2] [ref=e78]
+            - generic [ref=e79]:
+              - generic [ref=e80]:
+                - checkbox "Niedziela" [ref=e81]
+                - generic [ref=e82]: Niedziela
+                - generic [ref=e83]: Wolne
+              - generic [ref=e84]:
+                - checkbox "Poniedziałek" [checked] [ref=e85]
+                - generic [ref=e86]: Poniedziałek
+                - generic [ref=e87]:
+                  - textbox [ref=e88]: 09:00
+                  - generic [ref=e89]: –
+                  - textbox [ref=e90]: 18:00
+              - generic [ref=e91]:
+                - checkbox "Wtorek" [checked] [ref=e92]
+                - generic [ref=e93]: Wtorek
+                - generic [ref=e94]:
+                  - textbox [ref=e95]: 09:00
+                  - generic [ref=e96]: –
+                  - textbox [ref=e97]: 18:00
+              - generic [ref=e98]:
+                - checkbox "Środa" [checked] [ref=e99]
+                - generic [ref=e100]: Środa
+                - generic [ref=e101]:
+                  - textbox [ref=e102]: 09:00
+                  - generic [ref=e103]: –
+                  - textbox [ref=e104]: 18:00
+              - generic [ref=e105]:
+                - checkbox "Czwartek" [checked] [ref=e106]
+                - generic [ref=e107]: Czwartek
+                - generic [ref=e108]:
+                  - textbox [ref=e109]: 09:00
+                  - generic [ref=e110]: –
+                  - textbox [ref=e111]: 18:00
+              - generic [ref=e112]:
+                - checkbox "Piątek" [checked] [ref=e113]
+                - generic [ref=e114]: Piątek
+                - generic [ref=e115]:
+                  - textbox [ref=e116]: 09:00
+                  - generic [ref=e117]: –
+                  - textbox [ref=e118]: 18:00
+              - generic [ref=e119]:
+                - checkbox "Sobota" [checked] [ref=e120]
+                - generic [ref=e121]: Sobota
+                - generic [ref=e122]:
+                  - textbox [ref=e123]: 09:00
+                  - generic [ref=e124]: –
+                  - textbox [ref=e125]: 18:00
+              - button "Zapisz godziny" [ref=e126]
+          - generic [ref=e127]:
+            - heading "Blokady (urlopy, przerwy)" [level=2] [ref=e128]
+            - generic [ref=e129]:
+              - paragraph [ref=e130]: Brak blokad.
+              - generic [ref=e131]:
+                - paragraph [ref=e132]: Dodaj blokadę
+                - generic [ref=e133]:
+                  - textbox [ref=e134]
+                  - textbox [ref=e135]: 09:00
+                  - generic [ref=e136]: –
+                  - textbox [ref=e137]: 10:00
+                  - textbox "Powód (np. urlop)" [ref=e138]
+                - button "Dodaj blokadę" [disabled] [ref=e139]
+  - button "Open Next.js Dev Tools" [ref=e145] [cursor=pointer]:
+    - img [ref=e146]
+  - alert [ref=e149]

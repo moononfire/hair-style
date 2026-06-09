@@ -1,0 +1,16 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - heading "HairBook" [level=1] [ref=e5]
+      - paragraph [ref=e6]: Zaloguj się do systemu
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - text: Email
+        - textbox "Email" [ref=e9]:
+          - /placeholder: pracownik@salon.pl
+      - generic [ref=e10]:
+        - text: Hasło
+        - textbox "Hasło" [ref=e11]
+      - button "Zaloguj się" [ref=e12]
+  - button "Open Next.js Dev Tools" [ref=e18] [cursor=pointer]:
+    - img [ref=e19]

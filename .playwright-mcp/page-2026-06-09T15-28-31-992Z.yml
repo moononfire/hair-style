@@ -1,0 +1,71 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - generic [ref=e5]: HairBook
+      - navigation [ref=e6]:
+        - link "Kalendarz" [ref=e7] [cursor=pointer]:
+          - /url: /calendar
+          - img [ref=e8]
+          - text: Kalendarz
+        - link "Dzisiaj" [ref=e10] [cursor=pointer]:
+          - /url: /today
+          - img [ref=e11]
+          - text: Dzisiaj
+        - link "Wolne terminy" [ref=e14] [cursor=pointer]:
+          - /url: /availability
+          - img [ref=e15]
+          - text: Wolne terminy
+        - link "Wizyty" [ref=e18] [cursor=pointer]:
+          - /url: /appointments
+          - img [ref=e19]
+          - text: Wizyty
+        - link "Klienci" [ref=e22] [cursor=pointer]:
+          - /url: /clients
+          - img [ref=e23]
+          - text: Klienci
+        - link "Usługi" [ref=e28] [cursor=pointer]:
+          - /url: /services
+          - img [ref=e29]
+          - text: Usługi
+        - link "Pracownicy" [ref=e35] [cursor=pointer]:
+          - /url: /employees
+          - img [ref=e36]
+          - text: Pracownicy
+      - paragraph [ref=e49]: N nowa wizyta T dzisiaj
+    - generic [ref=e50]:
+      - banner [ref=e51]:
+        - generic [ref=e52]:
+          - generic [ref=e53]: Anna Kowalska
+          - button "Wyloguj" [ref=e54]
+      - main [ref=e55]:
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - generic [ref=e58]:
+              - heading "Wizyta" [level=1] [ref=e59]
+              - paragraph [ref=e60]: 9 czerwca 2026 o 09:00
+            - generic [ref=e61]: Potwierdzona
+          - generic [ref=e62]:
+            - generic [ref=e63]:
+              - term [ref=e64]: Klient
+              - definition [ref=e65]: Joanna Malinowska
+            - generic [ref=e66]:
+              - term [ref=e67]: Telefon
+              - definition [ref=e68]: "600111222"
+            - generic [ref=e69]:
+              - term [ref=e70]: Usługa
+              - definition [ref=e71]: Strzyżenie damskie
+            - generic [ref=e72]:
+              - term [ref=e73]: Pracownik
+              - definition [ref=e74]: Anna
+            - generic [ref=e75]:
+              - term [ref=e76]: Czas
+              - definition [ref=e77]: 09:00 – 10:00
+            - generic [ref=e78]:
+              - term [ref=e79]: Źródło
+              - definition [ref=e80]: counter
+          - generic [ref=e81]:
+            - button "Przybyła" [ref=e82]
+            - button "Anuluj wizytę" [ref=e83]
+  - button "Open Next.js Dev Tools" [ref=e89] [cursor=pointer]:
+    - img [ref=e90]
+  - alert [ref=e93]

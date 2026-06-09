@@ -1,0 +1,76 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - generic [ref=e5]: HairBook
+      - navigation [ref=e6]:
+        - link "Kalendarz" [ref=e7] [cursor=pointer]:
+          - /url: /calendar
+          - img [ref=e8]
+          - text: Kalendarz
+        - link "Dzisiaj" [ref=e10] [cursor=pointer]:
+          - /url: /today
+          - img [ref=e11]
+          - text: Dzisiaj
+        - link "Wolne terminy" [ref=e14] [cursor=pointer]:
+          - /url: /availability
+          - img [ref=e15]
+          - text: Wolne terminy
+        - link "Wizyty" [ref=e18] [cursor=pointer]:
+          - /url: /appointments
+          - img [ref=e19]
+          - text: Wizyty
+        - link "Klienci" [ref=e22] [cursor=pointer]:
+          - /url: /clients
+          - img [ref=e23]
+          - text: Klienci
+        - link "Usługi" [ref=e28] [cursor=pointer]:
+          - /url: /services
+          - img [ref=e29]
+          - text: Usługi
+        - link "Pracownicy" [ref=e35] [cursor=pointer]:
+          - /url: /employees
+          - img [ref=e36]
+          - text: Pracownicy
+      - paragraph [ref=e49]: N nowa wizyta T dzisiaj
+    - generic [ref=e50]:
+      - banner [ref=e51]:
+        - generic [ref=e52]:
+          - generic [ref=e53]: Anna Kowalska
+          - button "Wyloguj" [ref=e54]
+      - main [ref=e55]:
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - heading "Wolne terminy" [level=1] [ref=e58]
+            - paragraph [ref=e59]: Znajdź najbliższy wolny termin — idealne przy rozmowie telefonicznej.
+          - generic [ref=e61]:
+            - generic [ref=e62]:
+              - text: Usługa *
+              - combobox [ref=e63]:
+                - option "— wybierz usługę —" [selected]
+                - option "Blow-dry / stylizacja (45 min)"
+                - option "Koloryzacja (120 min)"
+                - option "Pielęgnacja (maska + wcierka) (30 min)"
+                - option "Strzyżenie damskie (60 min)"
+                - option "Strzyżenie męskie (30 min)"
+            - generic [ref=e64]:
+              - generic [ref=e65]:
+                - text: Czas trwania (min)
+                - spinbutton [ref=e66]: "60"
+              - generic [ref=e67]:
+                - text: Pracownik
+                - combobox [ref=e68]:
+                  - option "— dowolny —" [selected]
+                  - option "Anna"
+                  - option "Kasia"
+                  - option "Marek"
+            - generic [ref=e69]:
+              - generic [ref=e70]:
+                - text: Od *
+                - textbox [ref=e71]: 2026-06-09
+              - generic [ref=e72]:
+                - text: Do *
+                - textbox [ref=e73]: 2026-06-23
+            - button "Znajdź wolne terminy" [ref=e74]
+  - button "Open Next.js Dev Tools" [ref=e80] [cursor=pointer]:
+    - img [ref=e81]
+  - alert [ref=e84]

@@ -1,0 +1,211 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - generic [ref=e5]: HairBook
+      - navigation [ref=e6]:
+        - link "Kalendarz" [ref=e7] [cursor=pointer]:
+          - /url: /calendar
+          - img [ref=e8]
+          - text: Kalendarz
+        - link "Dzisiaj" [ref=e10] [cursor=pointer]:
+          - /url: /today
+          - img [ref=e11]
+          - text: Dzisiaj
+        - link "Wolne terminy" [ref=e14] [cursor=pointer]:
+          - /url: /availability
+          - img [ref=e15]
+          - text: Wolne terminy
+        - link "Wizyty" [ref=e18] [cursor=pointer]:
+          - /url: /appointments
+          - img [ref=e19]
+          - text: Wizyty
+        - link "Klienci" [ref=e22] [cursor=pointer]:
+          - /url: /clients
+          - img [ref=e23]
+          - text: Klienci
+        - link "Usługi" [ref=e28] [cursor=pointer]:
+          - /url: /services
+          - img [ref=e29]
+          - text: Usługi
+        - link "Pracownicy" [ref=e35] [cursor=pointer]:
+          - /url: /employees
+          - img [ref=e36]
+          - text: Pracownicy
+      - paragraph [ref=e49]: N nowa wizyta T dzisiaj
+    - generic [ref=e50]:
+      - banner [ref=e51]:
+        - generic [ref=e52]:
+          - generic [ref=e53]: Anna Kowalska
+          - button "Wyloguj" [ref=e54]
+      - main [ref=e55]:
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - generic [ref=e58]:
+              - heading "Wizyty" [level=1] [ref=e59]
+              - paragraph [ref=e60]: Najbliższe 7 dni
+            - link "+ Nowa wizyta" [ref=e61] [cursor=pointer]:
+              - /url: /appointments/new
+          - generic [ref=e62]:
+            - link "9 czerwca 2026 09:00 Joanna Malinowska Strzyżenie damskie · Anna Potwierdzona" [ref=e63] [cursor=pointer]:
+              - /url: /appointments/cmq6orz4f000oy8uk5s6ce4df
+              - generic [ref=e64]: 9 czerwca 2026
+              - generic [ref=e65]: 09:00
+              - generic [ref=e67]:
+                - paragraph [ref=e68]: Joanna Malinowska
+                - paragraph [ref=e69]: Strzyżenie damskie · Anna
+              - generic [ref=e70]: Potwierdzona
+            - link "9 czerwca 2026 09:00 Piotr Zając Strzyżenie męskie · Marek Potwierdzona" [ref=e71] [cursor=pointer]:
+              - /url: /appointments/cmq6orz91000qy8uk15ucd94j
+              - generic [ref=e72]: 9 czerwca 2026
+              - generic [ref=e73]: 09:00
+              - generic [ref=e75]:
+                - paragraph [ref=e76]: Piotr Zając
+                - paragraph [ref=e77]: Strzyżenie męskie · Marek
+              - generic [ref=e78]: Potwierdzona
+            - link "9 czerwca 2026 09:00 Joanna Malinowska Strzyżenie damskie · Anna Potwierdzona" [ref=e79] [cursor=pointer]:
+              - /url: /appointments/cmq6rkgiz00001guk6lpb9ybe
+              - generic [ref=e80]: 9 czerwca 2026
+              - generic [ref=e81]: 09:00
+              - generic [ref=e83]:
+                - paragraph [ref=e84]: Joanna Malinowska
+                - paragraph [ref=e85]: Strzyżenie damskie · Anna
+              - generic [ref=e86]: Potwierdzona
+            - link "9 czerwca 2026 09:00 Piotr Zając Strzyżenie męskie · Marek Potwierdzona" [ref=e87] [cursor=pointer]:
+              - /url: /appointments/cmq6rkgou00021guk8h6vs583
+              - generic [ref=e88]: 9 czerwca 2026
+              - generic [ref=e89]: 09:00
+              - generic [ref=e91]:
+                - paragraph [ref=e92]: Piotr Zając
+                - paragraph [ref=e93]: Strzyżenie męskie · Marek
+              - generic [ref=e94]: Potwierdzona
+            - link "9 czerwca 2026 10:00 Tomasz Lewandowski Strzyżenie męskie · Marek Potwierdzona" [ref=e95] [cursor=pointer]:
+              - /url: /appointments/cmq6orzbl000ry8ukrms8co0d
+              - generic [ref=e96]: 9 czerwca 2026
+              - generic [ref=e97]: 10:00
+              - generic [ref=e99]:
+                - paragraph [ref=e100]: Tomasz Lewandowski
+                - paragraph [ref=e101]: Strzyżenie męskie · Marek
+              - generic [ref=e102]: Potwierdzona
+            - link "9 czerwca 2026 10:00 Tomasz Lewandowski Strzyżenie męskie · Marek Potwierdzona" [ref=e103] [cursor=pointer]:
+              - /url: /appointments/cmq6rkgr200031guk6anq1omr
+              - generic [ref=e104]: 9 czerwca 2026
+              - generic [ref=e105]: 10:00
+              - generic [ref=e107]:
+                - paragraph [ref=e108]: Tomasz Lewandowski
+                - paragraph [ref=e109]: Strzyżenie męskie · Marek
+              - generic [ref=e110]: Potwierdzona
+            - link "9 czerwca 2026 11:00 Marta Krawczyk Koloryzacja · Anna Potwierdzona" [ref=e111] [cursor=pointer]:
+              - /url: /appointments/cmq6rkglx00011gukxazgoc2j
+              - generic [ref=e112]: 9 czerwca 2026
+              - generic [ref=e113]: 11:00
+              - generic [ref=e115]:
+                - paragraph [ref=e116]: Marta Krawczyk
+                - paragraph [ref=e117]: Koloryzacja · Anna
+              - generic [ref=e118]: Potwierdzona
+            - link "9 czerwca 2026 11:00 Marta Krawczyk Koloryzacja · Anna Potwierdzona" [ref=e119] [cursor=pointer]:
+              - /url: /appointments/cmq6orz6p000py8ukn4crfj7m
+              - generic [ref=e120]: 9 czerwca 2026
+              - generic [ref=e121]: 11:00
+              - generic [ref=e123]:
+                - paragraph [ref=e124]: Marta Krawczyk
+                - paragraph [ref=e125]: Koloryzacja · Anna
+              - generic [ref=e126]: Potwierdzona
+            - link "9 czerwca 2026 14:00 Joanna Malinowska Blow-dry / stylizacja · Kasia Potwierdzona" [ref=e127] [cursor=pointer]:
+              - /url: /appointments/cmq6orze1000sy8ukk5zrgy4g
+              - generic [ref=e128]: 9 czerwca 2026
+              - generic [ref=e129]: 14:00
+              - generic [ref=e131]:
+                - paragraph [ref=e132]: Joanna Malinowska
+                - paragraph [ref=e133]: Blow-dry / stylizacja · Kasia
+              - generic [ref=e134]: Potwierdzona
+            - link "9 czerwca 2026 14:00 Joanna Malinowska Blow-dry / stylizacja · Kasia Potwierdzona" [ref=e135] [cursor=pointer]:
+              - /url: /appointments/cmq6rkgtg00041gukix6t23k9
+              - generic [ref=e136]: 9 czerwca 2026
+              - generic [ref=e137]: 14:00
+              - generic [ref=e139]:
+                - paragraph [ref=e140]: Joanna Malinowska
+                - paragraph [ref=e141]: Blow-dry / stylizacja · Kasia
+              - generic [ref=e142]: Potwierdzona
+            - link "10 czerwca 2026 09:00 Marta Krawczyk Pielęgnacja (maska + wcierka) · Kasia Potwierdzona" [ref=e143] [cursor=pointer]:
+              - /url: /appointments/cmq6rkgy000061guk39f8mttn
+              - generic [ref=e144]: 10 czerwca 2026
+              - generic [ref=e145]: 09:00
+              - generic [ref=e147]:
+                - paragraph [ref=e148]: Marta Krawczyk
+                - paragraph [ref=e149]: Pielęgnacja (maska + wcierka) · Kasia
+              - generic [ref=e150]: Potwierdzona
+            - link "10 czerwca 2026 09:00 Marta Krawczyk Pielęgnacja (maska + wcierka) · Kasia Potwierdzona" [ref=e151] [cursor=pointer]:
+              - /url: /appointments/cmq6orzi9000uy8ukqtblr6u9
+              - generic [ref=e152]: 10 czerwca 2026
+              - generic [ref=e153]: 09:00
+              - generic [ref=e155]:
+                - paragraph [ref=e156]: Marta Krawczyk
+                - paragraph [ref=e157]: Pielęgnacja (maska + wcierka) · Kasia
+              - generic [ref=e158]: Potwierdzona
+            - link "10 czerwca 2026 10:00 Tomasz Lewandowski Strzyżenie damskie · Anna Potwierdzona" [ref=e159] [cursor=pointer]:
+              - /url: /appointments/cmq6orzg9000ty8uk4vspy0d6
+              - generic [ref=e160]: 10 czerwca 2026
+              - generic [ref=e161]: 10:00
+              - generic [ref=e163]:
+                - paragraph [ref=e164]: Tomasz Lewandowski
+                - paragraph [ref=e165]: Strzyżenie damskie · Anna
+              - generic [ref=e166]: Potwierdzona
+            - link "10 czerwca 2026 10:00 Tomasz Lewandowski Strzyżenie damskie · Anna Potwierdzona" [ref=e167] [cursor=pointer]:
+              - /url: /appointments/cmq6rkgvn00051gukguc8ffs1
+              - generic [ref=e168]: 10 czerwca 2026
+              - generic [ref=e169]: 10:00
+              - generic [ref=e171]:
+                - paragraph [ref=e172]: Tomasz Lewandowski
+                - paragraph [ref=e173]: Strzyżenie damskie · Anna
+              - generic [ref=e174]: Potwierdzona
+            - link "11 czerwca 2026 11:00 Joanna Malinowska Strzyżenie męskie · Marek Potwierdzona" [ref=e175] [cursor=pointer]:
+              - /url: /appointments/cmq6rkh0o00071gukgb0v2pdu
+              - generic [ref=e176]: 11 czerwca 2026
+              - generic [ref=e177]: 11:00
+              - generic [ref=e179]:
+                - paragraph [ref=e180]: Joanna Malinowska
+                - paragraph [ref=e181]: Strzyżenie męskie · Marek
+              - generic [ref=e182]: Potwierdzona
+            - link "11 czerwca 2026 11:00 Joanna Malinowska Strzyżenie męskie · Marek Potwierdzona" [ref=e183] [cursor=pointer]:
+              - /url: /appointments/cmq6orzkh000vy8uktz0atw39
+              - generic [ref=e184]: 11 czerwca 2026
+              - generic [ref=e185]: 11:00
+              - generic [ref=e187]:
+                - paragraph [ref=e188]: Joanna Malinowska
+                - paragraph [ref=e189]: Strzyżenie męskie · Marek
+              - generic [ref=e190]: Potwierdzona
+            - link "12 czerwca 2026 10:00 Piotr Zając Koloryzacja · Anna Potwierdzona" [ref=e191] [cursor=pointer]:
+              - /url: /appointments/cmq6rkh3700081guk6tq9pcgb
+              - generic [ref=e192]: 12 czerwca 2026
+              - generic [ref=e193]: 10:00
+              - generic [ref=e195]:
+                - paragraph [ref=e196]: Piotr Zając
+                - paragraph [ref=e197]: Koloryzacja · Anna
+              - generic [ref=e198]: Potwierdzona
+            - link "12 czerwca 2026 10:00 Piotr Zając Koloryzacja · Anna Potwierdzona" [ref=e199] [cursor=pointer]:
+              - /url: /appointments/cmq6orzmp000wy8ukjesi4hlg
+              - generic [ref=e200]: 12 czerwca 2026
+              - generic [ref=e201]: 10:00
+              - generic [ref=e203]:
+                - paragraph [ref=e204]: Piotr Zając
+                - paragraph [ref=e205]: Koloryzacja · Anna
+              - generic [ref=e206]: Potwierdzona
+            - link "13 czerwca 2026 13:00 Tomasz Lewandowski Strzyżenie damskie · Kasia Potwierdzona" [ref=e207] [cursor=pointer]:
+              - /url: /appointments/cmq6rkh5l00091gukh7siupsk
+              - generic [ref=e208]: 13 czerwca 2026
+              - generic [ref=e209]: 13:00
+              - generic [ref=e211]:
+                - paragraph [ref=e212]: Tomasz Lewandowski
+                - paragraph [ref=e213]: Strzyżenie damskie · Kasia
+              - generic [ref=e214]: Potwierdzona
+            - link "13 czerwca 2026 13:00 Tomasz Lewandowski Strzyżenie damskie · Kasia Potwierdzona" [ref=e215] [cursor=pointer]:
+              - /url: /appointments/cmq6orzpg000xy8ukbg70dszq
+              - generic [ref=e216]: 13 czerwca 2026
+              - generic [ref=e217]: 13:00
+              - generic [ref=e219]:
+                - paragraph [ref=e220]: Tomasz Lewandowski
+                - paragraph [ref=e221]: Strzyżenie damskie · Kasia
+              - generic [ref=e222]: Potwierdzona
+  - button "Open Next.js Dev Tools" [ref=e228] [cursor=pointer]:
+    - img [ref=e229]
+  - alert [ref=e232]
