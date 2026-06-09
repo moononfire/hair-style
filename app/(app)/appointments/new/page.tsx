@@ -1,5 +1,4 @@
 import { prisma } from "@/lib/prisma";
-import type { Employee, Service } from "@prisma/client";
 import AppointmentForm from "@/components/appointments/AppointmentForm";
 
 export default async function NewAppointmentPage({
@@ -21,8 +20,8 @@ export default async function NewAppointmentPage({
         <p className="text-sm text-muted-foreground">Wypełnij formularz aby zapisać wizytę.</p>
       </div>
       <AppointmentForm
-        employees={employees.map((e: Employee) => ({ id: e.id, name: e.name, color: e.color }))}
-        services={services.map((s: Service) => ({ id: s.id, name: s.name, durationMin: s.durationMin, color: s.color }))}
+        employees={employees.map((e: { id: string; name: string; color: string }) => ({ id: e.id, name: e.name, color: e.color }))}
+        services={services.map((s: { id: string; name: string; durationMin: number; color: string | null }) => ({ id: s.id, name: s.name, durationMin: s.durationMin, color: s.color }))}
         defaults={{ employeeId, startsAt, serviceId }}
       />
     </div>

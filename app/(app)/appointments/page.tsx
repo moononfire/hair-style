@@ -3,6 +3,15 @@ import { prisma } from "@/lib/prisma";
 import StatusBadge from "@/components/appointments/StatusBadge";
 import { formatDate, formatTime } from "@/lib/date";
 
+type AppointmentRow = {
+  id: string;
+  startsAt: Date;
+  status: string;
+  client: { name: string } | null;
+  employee: { name: string; color: string };
+  service: { name: string };
+};
+
 export default async function AppointmentsPage() {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
@@ -37,7 +46,7 @@ export default async function AppointmentsPage() {
         <p className="text-sm text-muted-foreground">Brak wizyt w tym tygodniu.</p>
       ) : (
         <div className="divide-y rounded-lg border">
-          {appointments.map((a) => (
+          {appointments.map((a: AppointmentRow) => (
             <Link
               key={a.id}
               href={`/appointments/${a.id}`}
