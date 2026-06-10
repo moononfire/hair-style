@@ -22,8 +22,11 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         const h = await headers();
         const tenantId = h.get("x-tenant-id");
 
-        const user = await prisma.user.findUnique({
-          where: { email: credentials.email as string },
+        const user = await prisma.user.findFirst({
+          where: {
+            email: credentials.email as string,
+            ...(tenantId ? { employee: { tenantId } } : {}),
+          },
           include: { employee: true },
         });
 
