@@ -1,5 +1,6 @@
 import { prisma } from "@/lib/prisma";
 import { startOfDay, endOfDay, startOfWeek, endOfWeek } from "@/lib/date";
+import { getTenantId, tf } from "@/lib/tenant-server";
 import CalendarView from "@/components/calendar/CalendarView";
 import type { AppointmentSerialized, EmployeeSerialized } from "@/components/calendar/CalendarView";
 
@@ -17,13 +18,16 @@ export default async function CalendarPage({
   const from = calView === "week" ? startOfWeek(currentDate) : startOfDay(currentDate);
   const to = calView === "week" ? endOfWeek(currentDate) : endOfDay(currentDate);
 
+  const tenantId = await getTenantId();
+
   const [employees, appointments] = await Promise.all([
     prisma.employee.findMany({
-      where: { active: true },
+      where: { ...tf(tenantId), active: true },
       orderBy: { name: "asc" },
     }),
     prisma.appointment.findMany({
       where: {
+        ...tf(tenantId),
         startsAt: { gte: from },
         endsAt: { lte: to },
         status: { not: "cancelled" },

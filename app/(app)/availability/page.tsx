@@ -1,10 +1,12 @@
 import { prisma } from "@/lib/prisma";
+import { getTenantId, tf } from "@/lib/tenant-server";
 import AvailabilitySearch from "@/components/availability/AvailabilitySearch";
 
 export default async function AvailabilityPage() {
+  const tenantId = await getTenantId();
   const [employees, services] = await Promise.all([
-    prisma.employee.findMany({ where: { active: true }, orderBy: { name: "asc" } }),
-    prisma.service.findMany({ where: { active: true }, orderBy: { name: "asc" } }),
+    prisma.employee.findMany({ where: { ...tf(tenantId), active: true }, orderBy: { name: "asc" } }),
+    prisma.service.findMany({ where: { ...tf(tenantId), active: true }, orderBy: { name: "asc" } }),
   ]);
 
   return (

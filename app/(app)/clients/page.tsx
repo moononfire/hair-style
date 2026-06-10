@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
+import { getTenantId, tf } from "@/lib/tenant-server";
 
 export default async function ClientsPage({
   searchParams,
@@ -7,16 +8,18 @@ export default async function ClientsPage({
   searchParams: Promise<{ q?: string }>;
 }) {
   const { q = "" } = await searchParams;
+  const tenantId = await getTenantId();
 
   const clients = await prisma.client.findMany({
     where: q
       ? {
+          ...tf(tenantId),
           OR: [
             { name: { contains: q, mode: "insensitive" } },
             { phone: { contains: q } },
           ],
         }
-      : undefined,
+      : { ...tf(tenantId) },
     orderBy: { name: "asc" },
     include: { _count: { select: { appointments: true } } },
     take: 50,

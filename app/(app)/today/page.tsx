@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import { startOfDay, endOfDay, formatDate } from "@/lib/date";
+import { getTenantId, tf } from "@/lib/tenant-server";
 import TodayCard from "@/components/appointments/TodayCard";
 
 export const dynamic = "force-dynamic";
@@ -10,8 +11,11 @@ export default async function TodayPage() {
   const dayStart = startOfDay(now);
   const dayEnd = endOfDay(now);
 
+  const tenantId = await getTenantId();
+
   const appointments = await prisma.appointment.findMany({
     where: {
+      ...tf(tenantId),
       startsAt: { gte: dayStart, lte: dayEnd },
       status: { not: "cancelled" },
     },

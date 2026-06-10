@@ -1,8 +1,11 @@
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
+import { getTenantId, tf } from "@/lib/tenant-server";
 
 export default async function EmployeesPage() {
+  const tenantId = await getTenantId();
   const employees = await prisma.employee.findMany({
+    where: { ...tf(tenantId) },
     orderBy: { name: "asc" },
     include: { _count: { select: { appointments: true } } },
   });

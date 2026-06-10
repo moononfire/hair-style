@@ -1,8 +1,11 @@
 import { prisma } from "@/lib/prisma";
+import { getTenantId, tf } from "@/lib/tenant-server";
 import ServicesManager from "@/components/services/ServicesManager";
 
 export default async function ServicesPage() {
+  const tenantId = await getTenantId();
   const services = await prisma.service.findMany({
+    where: { ...tf(tenantId) },
     orderBy: { name: "asc" },
   });
 

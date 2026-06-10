@@ -92,9 +92,9 @@ export async function updateAppointment(
   tenantId: string | null,
   input: UpdateAppointmentInput
 ): Promise<AppointmentFull> {
-  if (input.startsAt && input.endsAt) {
+  if (input.startsAt && input.endsAt && input.employeeId) {
     await assertNoConflict(
-      input.employeeId!,
+      input.employeeId,
       input.startsAt,
       input.endsAt,
       tenantId,
