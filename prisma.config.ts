@@ -1,4 +1,9 @@
 import { defineConfig } from "prisma/config";
+import { config } from "dotenv";
+import { expand } from "dotenv-expand";
+import path from "path";
+
+expand(config({ path: path.resolve(process.cwd(), ".env.local") }));
 
 export default defineConfig({
   migrations: {

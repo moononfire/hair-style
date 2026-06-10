@@ -1,26 +1,33 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
+import { auth } from "@/lib/auth";
 import { resolveTenant } from "@/lib/tenant";
 
-export async function middleware(request: NextRequest) {
-  const host = request.headers.get("host") ?? "";
-
-  // Skip API and auth routes
+export default auth(async function middleware(request) {
   const pathname = request.nextUrl.pathname;
-  if (
-    pathname.startsWith("/api/") ||
-    pathname.startsWith("/_next/") ||
-    pathname.startsWith("/favicon")
-  ) {
+
+  // API routes are always public — no auth required
+  if (pathname.startsWith("/api/")) {
     return NextResponse.next();
   }
 
-  const agencyPlatformUrl = process.env.AGENCY_PLATFORM_URL;
+  // Login page is always accessible
+  if (pathname.startsWith("/login")) {
+    return NextResponse.next();
+  }
 
-  // Not in multi-tenant mode — pass through
+  // All other routes require authentication
+  if (!request.auth?.user) {
+    const loginUrl = new URL("/login", request.url);
+    return NextResponse.redirect(loginUrl);
+  }
+
+  // In multi-tenant mode: resolve tenant and inject headers
+  const agencyPlatformUrl = process.env.AGENCY_PLATFORM_URL;
   if (!agencyPlatformUrl) {
     return NextResponse.next();
   }
 
+  const host = request.headers.get("host") ?? "";
   const tenant = await resolveTenant(host);
 
   if (!tenant) {
@@ -29,12 +36,21 @@ export async function middleware(request: NextRequest) {
 
   const requestHeaders = new Headers(request.headers);
   requestHeaders.set("x-tenant-id", tenant.tenantId);
+  requestHeaders.set("x-tenant-data", JSON.stringify({
+    tenantId: tenant.tenantId,
+    businessName: tenant.businessName,
+    logoUrl: tenant.logoUrl,
+    primaryColor: tenant.primaryColor,
+    slug: tenant.slug,
+  }));
 
   return NextResponse.next({
     request: { headers: requestHeaders },
   });
-}
+});
 
 export const config = {
-  matcher: ["/((?!_next/static|_next/image|favicon.ico).*)"],
+  matcher: [
+    "/((?!api/auth|api/carddav|_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
+  ],
 };
