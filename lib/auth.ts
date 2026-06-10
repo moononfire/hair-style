@@ -36,7 +36,10 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 
         if (!valid) return null;
 
-        // In multi-tenant mode: only allow login if user's employee belongs to this tenant
+        // In multi-tenant mode: require tenant context and verify user belongs to this tenant.
+        // Fail closed — if tenantId is missing when AGENCY_PLATFORM_URL is set, deny login.
+        const isMultiTenant = !!process.env.AGENCY_PLATFORM_URL;
+        if (isMultiTenant && !tenantId) return null;
         if (tenantId && user.employee?.tenantId !== tenantId) return null;
 
         return { ...user, tenantId: tenantId ?? undefined };
