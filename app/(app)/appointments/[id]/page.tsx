@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
+import { getTenantId, tf } from "@/lib/tenant-server";
 import StatusBadge from "@/components/appointments/StatusBadge";
 import AppointmentActions from "@/components/appointments/AppointmentActions";
 import { formatDate, formatTime } from "@/lib/date";
@@ -10,9 +11,10 @@ export default async function AppointmentDetailPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
+  const tenantId = await getTenantId();
 
-  const appointment = await prisma.appointment.findUnique({
-    where: { id },
+  const appointment = await prisma.appointment.findFirst({
+    where: { id, ...tf(tenantId) },
     include: { client: true, employee: true, service: true },
   });
 

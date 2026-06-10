@@ -43,7 +43,7 @@ export async function POST(
 
   const block = await prisma.timeBlock.create({
     data: {
-      ...(tenantId ? { tenantId } : {}),
+      ...tf(tenantId),
       employeeId: id,
       startsAt: new Date(startsAt),
       endsAt: new Date(endsAt),

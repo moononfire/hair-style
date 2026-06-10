@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/prisma";
+import { tf } from "@/lib/tenant-server";
 import type { Appointment, Client, Employee, Service } from "@prisma/client";
 
 export type AppointmentFull = Appointment & {
@@ -37,7 +38,7 @@ export async function getAppointmentsByRange(
 ): Promise<AppointmentFull[]> {
   return prisma.appointment.findMany({
     where: {
-      ...(tenantId ? { tenantId } : {}),
+      ...tf(tenantId),
       startsAt: { gte: from },
       endsAt: { lte: to },
       ...(employeeId ? { employeeId } : {}),
@@ -102,6 +103,9 @@ export async function updateAppointment(
     );
   }
 
+  const existing = await prisma.appointment.findFirst({ where: { id, ...tf(tenantId) } });
+  if (!existing) throw new Error("Not found");
+
   return prisma.appointment.update({
     where: { id },
     data: input,
@@ -113,11 +117,11 @@ export async function cancelAppointment(
   id: string,
   tenantId: string | null
 ): Promise<void> {
-  const filter = tenantId ? { id, tenantId } : { id };
+  const filter = { id, ...tf(tenantId) };
   const existing = await prisma.appointment.findFirst({ where: filter });
   if (!existing) throw new Error("Not found");
   await prisma.appointment.update({
-    where: { id },
+    where: { id, ...tf(tenantId) },
     data: { status: "cancelled" },
   });
 }
@@ -131,7 +135,7 @@ async function assertNoConflict(
 ): Promise<void> {
   const conflict = await prisma.appointment.findFirst({
     where: {
-      ...(tenantId ? { tenantId } : {}),
+      ...tf(tenantId),
       employeeId,
       status: { not: "cancelled" },
       id: excludeId ? { not: excludeId } : undefined,

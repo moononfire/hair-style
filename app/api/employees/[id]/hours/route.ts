@@ -48,7 +48,7 @@ export async function PUT(
       if (!h) continue;
       await tx.employeeHours.create({
         data: {
-          ...(tenantId ? { tenantId } : {}),
+          ...tf(tenantId),
           employeeId: id,
           dayOfWeek: h.dayOfWeek,
           startTime: h.startTime,

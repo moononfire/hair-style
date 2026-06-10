@@ -60,6 +60,6 @@ export default auth(async (req) => {
 
 export const config = {
   matcher: [
-    "/((?!api/auth|api/carddav|_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
+    "/((?!api/auth|api/carddav|api/setup|_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
   ],
 };

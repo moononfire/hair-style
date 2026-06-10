@@ -8,7 +8,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  const { tenantId, adminName, adminEmail, adminPassword } = await req.json();
+  const { tenantId, adminName, adminEmail, adminPassword, services } = await req.json();
 
   if (!tenantId || !adminName || !adminEmail || !adminPassword) {
     return NextResponse.json({ error: "Missing fields" }, { status: 400 });
@@ -38,6 +38,31 @@ export async function POST(req: NextRequest) {
       },
     },
   });
+
+  const DEFAULT_DURATIONS: Record<string, number> = {
+    "Strzyżenie damskie": 60,
+    "Strzyżenie męskie": 30,
+    "Koloryzacja": 120,
+    "Pielęgnacja brody": 30,
+    "Manicure": 60,
+    "Pedicure": 60,
+    "Masaż": 60,
+    "Makijaż": 60,
+  };
+
+  if (services) {
+    const serviceNames: string[] = services.split(",").filter(Boolean);
+    if (serviceNames.length > 0) {
+      await prisma.service.createMany({
+        data: serviceNames.map((name: string) => ({
+          tenantId,
+          name,
+          durationMin: DEFAULT_DURATIONS[name] ?? 60,
+          active: true,
+        })),
+      });
+    }
+  }
 
   return NextResponse.json({ userId: user.id }, { status: 201 });
 }

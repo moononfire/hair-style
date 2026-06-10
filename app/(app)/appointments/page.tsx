@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
+import { getTenantId, tf } from "@/lib/tenant-server";
 import StatusBadge from "@/components/appointments/StatusBadge";
 import { formatDate, formatTime } from "@/lib/date";
 
@@ -13,6 +14,7 @@ type AppointmentRow = {
 };
 
 export default async function AppointmentsPage() {
+  const tenantId = await getTenantId();
   const today = new Date();
   today.setHours(0, 0, 0, 0);
   const weekEnd = new Date(today);
@@ -20,6 +22,7 @@ export default async function AppointmentsPage() {
 
   const appointments = await prisma.appointment.findMany({
     where: {
+      ...tf(tenantId),
       startsAt: { gte: today, lt: weekEnd },
       status: { not: "cancelled" },
     },

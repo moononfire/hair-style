@@ -5,7 +5,8 @@ export async function getTenantId(): Promise<string | null> {
   return h.get("x-tenant-id");
 }
 
-// Buduje fragment `where` dla Prisma — pusty gdy brak tenantId (tryb dev)
-export function tf(tenantId: string | null): { tenantId?: string } {
-  return tenantId ? { tenantId } : {};
+// Buduje fragment `where` dla Prisma z tenantId
+export function tf(tenantId: string | null): { tenantId: string } {
+  if (!tenantId) throw new Error("Missing tenantId — AGENCY_PLATFORM_URL not configured?");
+  return { tenantId };
 }
